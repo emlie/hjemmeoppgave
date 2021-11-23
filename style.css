@@ -5,15 +5,14 @@
     --dark-gray: #282828;
     --medium-gray: #e0e0e0;
     --light-gray: #F4F7FC;
-    --main-red: #F0142F;
-    --main-green: #3DD598;
-    --main-yellow: #FFC700;
     --white: #FFFFFF;
     /*-- SIZING --*/
     --space: 1rem;
     /*-- FONT WEIGHTS --*/
     --regular: 400;
     --bold: 700;
+    /*-- TRANSITIONS --*/
+    --smooth: ease-in-out 0.25s;
 }
 
 
@@ -58,6 +57,44 @@ header {
 
 
 /* CLASSES */
+
+.pagination {
+    width: 70vw;
+    margin: calc(var(--space)*2) 0 calc(var(--space)*4) 0;
+    border: none;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    font-family: var(--body-font);
+    font-size: calc(var(--space)*3);
+    font-weight: var(--regular);
+    color: var(--dark-gray);
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.pagination div {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+.pageBtn {
+    margin: 0 calc(var(--space)*0.5);
+    padding: calc(var(--space)*0.5) calc(var(--space)*2);
+    border-radius: calc(var(--space)*20);
+    background: var(--medium-gray);
+    cursor: pointer;
+    font-size: calc(var(--space)*2);
+}
+
+.pageBtn i {
+    color: inherit;
+}
 
 .tableContainer {
     width: 70vw;
