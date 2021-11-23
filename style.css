@@ -3,6 +3,7 @@
     --body-font: 'Poppins', sans-serif;
     /*-- COLORS --*/
     --dark-gray: #282828;
+    --medium-gray: #e0e0e0;
     --light-gray: #F4F7FC;
     --main-red: #F0142F;
     --main-green: #3DD598;
@@ -28,6 +29,9 @@
     /* 1 rem = 10 px */
 }
 
+
+/* TEXT STYLES */
+
 h1 {
     margin: calc(var(--space)*5) 0 0 0;
     font-family: var(--body-font);
@@ -49,8 +53,11 @@ body {
 
 header {
     width: 70%;
-    border: 1px solid red;
+    border: none;
 }
+
+
+/* CLASSES */
 
 .tableContainer {
     width: 70vw;
@@ -63,7 +70,7 @@ header {
     height: 100%;
     padding: calc(var(--space)*2);
     background: var(--white);
-    border: 1px solid green;
+    border: calc(var(--space)*0.1) solid var(--medium-gray);
     border-radius: calc(var(--space)*1.5);
     font-family: var(--body-font);
     color: var(--dark-gray);
@@ -72,15 +79,28 @@ header {
 }
 
 .dataTable th {
-    padding: 0 calc(var(--space)*2);
-    border: 1px solid cyan;
-    font-size: calc(var(--space)*2);
+    padding: calc(var(--space)*0.5) calc(var(--space)*2);
+    border: none;
+    font-size: calc(var(--space)*1.5);
     font-weight: var(--bold);
 }
 
 .dataTable td {
-    padding: 0 calc(var(--space)*2);
-    border: 1px solid red;
-    font-size: calc(var(--space)*2);
+    background: transparent;
+    padding: calc(var(--space)*0.5) calc(var(--space)*2);
+    border: none;
+    font-size: calc(var(--space)*1.5);
     font-weight: var(--regular);
+}
+
+.dataTable tr:first-child th {
+    background: var(--medium-gray);
+}
+
+.dataTable tr:first-child th:first-child {
+    border-radius: calc(var(--space)*1.5) 0 0 0;
+}
+
+.dataTable tr:first-child th:last-child {
+    border-radius: 0 calc(var(--space)*1.5) 0 0;
 }
