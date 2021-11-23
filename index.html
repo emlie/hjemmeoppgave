@@ -11,15 +11,30 @@
     <header>
         <h1>bitcoin data</h1>
     </header>
+
+    <div class="pagination">
+        <!-- button go backwards-->
+        <a class="pageBtn" data-direction="previous"><i class="fas fa-angle-left"></i> previous</a>
+
+        <!-- buttons go to specific page; 100 days / 20 days=5 pages (buttons)-->
+        <div id="paginationButtons">
+            <!-- Insert buttons via script -->
+        </div>
+
+        <!-- button go forwards-->
+        <a class="pageBtn" data-direction="next">next <i class="fas fa-angle-right"></i> </a>
+    </div>
+
     <div class="tableContainer">
         <table id="dataTable" class="dataTable">
             <!-- Test content for making sure styling is all right: -->
             <tr id="dataTableHeader">
-                <!-- Insert via script -->
+                <!-- Insert header row via script -->
             </tr>
-            <!-- Insert via script -->
+            <!-- Insert data rows via script -->
         </table>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="script.js"></script>
 </body>
